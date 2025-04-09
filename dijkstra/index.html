@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dijkstra Algorithm Visualizer</h1>
+        
+        <div class="toolbar">
+            <button class="tool active" id="node-tool">Add Node</button>
+            <button class="tool" id="edge-tool">Add Edge</button>
+        </div>
+        
+        <div class="control-panel">
+            <button id="run-dijkstra">Run Dijkstra</button>
+            <button id="clear-path">Clear Path</button>
+            <button id="generate-random">Generate Random Graph</button>
+            <button id="clear-all">Clear All</button>
+        </div>
+        
+        <div class="info-box">
+            <strong>Instructions:</strong> Add nodes by clicking on the canvas. Connect nodes by selecting the Edge tool and dragging from one node to another. 
+            Set a start node (green) by double-clicking on a node. Set an end node (red) by right-clicking on a node.
+        </div>
+        
+        <div class="canvas-container">
+            <div id="graph-canvas"></div>
+        </div>
+        
+        <div class="results" id="results-panel">
+            <h3>Results</h3>
+            <div id="results-content">Run Dijkstra's algorithm to see results.</div>
+        </div>
+    </div>
+    
+    <div id="weight-modal" class="modal">
+        <div class="modal-content">
+            <h3>Set Edge Weight</h3>
+            <input type="number" id="weight-input" min="1" value="1">
+            <button class="confirm-btn" id="confirm-weight">Confirm</button>
+            <button class="cancel-btn" id="cancel-weight">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

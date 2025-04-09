@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.maze-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.maze-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.maze-button:hover {
+    background-color: #45a049;
+}
+
+.maze-button.active {
+    background-color: #2E7D32;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196F3;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0b7dda;
+}
+
+.maze-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.maze {
+    display: inline-grid;
+    grid-template-columns: repeat(64, 10px);
+    grid-template-rows: repeat(64, 10px);
+    gap: 1px;
+    border: 2px solid #333;
+    background-color: #000;
+    max-width: 704px;
+    max-height: 704px;
+    overflow: hidden;
+}
+
+.cell {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.wall {
+    background-color: #333;
+}
+
+.start {
+    background-color: #27ae60;
+}
+
+.end {
+    background-color: #e74c3c;
+}
+
+.path {
+    background-color: #3498db;
+}
+
+.solution {
+    background-color: #9b59b6;
+}
+
+.bomb {
+    background-color: #f39c12;
+    border-radius: 50%;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.instructions {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#level-complete-modal h2 {
+    color: #27ae60;
+} 

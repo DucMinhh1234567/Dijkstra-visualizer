@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maze Game</h1>
+        
+        <div class="instructions">
+            <p><strong>How to play:</strong> Click on empty cells to draw your path from the start (green) to the end (red). Avoid bombs (orange) as they add a penalty to your score. After completing your path, the optimal solution will be shown.</p>
+        </div>
+        
+        <div class="maze-selection">
+            <h3>Select a Maze:</h3>
+            <div id="maze-buttons"></div>
+        </div>
+        
+        <div class="game-info">
+            <div>
+                <strong>Current Level:</strong> <span id="current-level">1</span>
+            </div>
+            <div>
+                <strong>Steps:</strong> <span id="step-count">0</span>
+            </div>
+            <div>
+                <strong>Bombs Hit:</strong> <span id="bombs-hit">0</span>
+            </div>
+            <div>
+                <strong>Score:</strong> <span id="score">0</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="reset-path">Reset Path</button>
+            <button id="show-solution">Show Solution</button>
+        </div>
+        
+        <div class="maze-container">
+            <div id="maze" class="maze"></div>
+        </div>
+        
+        <div class="results" id="results-panel">
+            <h3>Results</h3>
+            <div id="results-content">Complete the maze to see results.</div>
+        </div>
+    </div>
+    
+    <div id="level-complete-modal" class="modal">
+        <div class="modal-content">
+            <h2>Level Complete!</h2>
+            <p>Your path length: <span id="your-path-length"></span></p>
+            <p>Optimal path length: <span id="optimal-path-length"></span></p>
+            <p>Bombs hit: <span id="modal-bombs-hit"></span></p>
+            <p>Your score: <span id="final-score"></span></p>
+            <button class="close-button" id="next-level">Next Level</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
